@@ -12,7 +12,7 @@ int main()
             int min = i < j ? i : j;
             min = min < Patternlen - i ? min : Patternlen - i - 1;
             min = min < Patternlen - j - 1 ? min : Patternlen - j - 1;
-            printf("%d\t", n - min);
+            printf("%d ", n - min);
         }
         printf("\n");
     }
