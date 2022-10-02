@@ -30,7 +30,7 @@ void Connectivity(int v)
 void main()
 {
     int v,choice;
-    printf("enterr the number of cities\n");
+    printf("Enter the number of cities\n");
     scanf("%d",&n);
     for(i=1;i<n;i++)
     {
@@ -38,25 +38,25 @@ void main()
         visited[i]=0;
         reach[i]=0;
     }
-    printf("enter in matrix form\n");
+    printf("Enter in matrix form\n");
     for(i=1;i<=n;i++)
     for(j=1;j<=n;j++)
     scanf("%d",&a[i][j]);
     while(1)
     {
-        printf("menu\n");
-        printf("1.test for reachability\n");
-        printf("2.test for connectivirt\n");
-        printf("3.exit\n");
-        printf("your choice\n");
+        printf("Menu\n");
+        printf("1.Test for reachability\n");
+        printf("2.Test for connectivirt\n");
+        printf("3.Exit\n");
+        printf("Enter Your choice:\n");
         scanf("%d",&choice);
         switch(choice)
         {
-            case 1:printf("enter valid vertex\n");
+            case 1:printf("Enter valid vertex\n");
             scanf("%d",&v);
             if((v>1)||(v<1))
             {
-                printf("enter the valid vertex\n");
+                printf("Enter the valid vertex\n");
             }
             else{
                 for(i=1;i<n;i++){
@@ -66,7 +66,7 @@ void main()
                 }
                 visited[v]=1;
                 Reachability(v);
-                printf("recvhable node from %d",v);
+                printf("Rechable node from %d",v);
                 for(i=1;i<=n;i++)
                 if(visited[i]&&i!=v)
                 printf("node %d\n",i);
@@ -76,12 +76,12 @@ void main()
             reach[i]=0;
             Connectivity(1);
             if(count==n-1)
-                printf("graph is connected\n");
+                printf("Graph is connected\n");
             else
-                printf("graph is not connected\n");
+                printf("Graph is not connected\n");
             break;
             case 3:return;
-            default:printf("invalid choice");
+            default:printf("Invalid choice");
 
         }
         
