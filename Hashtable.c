@@ -8,10 +8,10 @@ void main(){
     for(i=0;i<max;i++)
     a[i]=-1;
     while(1){
-        printf("\n1.linear probing\n");
-        printf("2.insert");
-        printf("\n3.exit");
-        printf("your choice:");
+        printf("\n1.Linear Probing\n");
+        printf("2.Insert");
+        printf("\n3.Exit");
+        printf("Your choice:");
         scanf("%d",&choice);
         switch(choice){
             case 1:linear_prob(a,num);
@@ -44,7 +44,7 @@ void linear_prob(int a[max],int num)
     
         else
         {
-            printf("\n detected collision\n");
+            printf("\n Detected collision\n");
             i=0;
         }
     
@@ -58,7 +58,7 @@ void linear_prob(int a[max],int num)
                 break;
                 if(count==max)
                 {
-                    printf("hash table is full\n");
+                    printf("Hash Table Is Full\n");
                     display(a);
                     return;
                 }
@@ -83,14 +83,14 @@ void linear_prob(int a[max],int num)
                     }
                 }
             }
-                    printf("\n do you want to continue(y/n)");  
+                    printf("\n Do you want to continue(y/n)");  
                     scanf(" %c",&ans);   
     } 
 }
 void display(int a[max])
 {
     int i;
-    printf("\n hash taable is\n");
+    printf("\n Hash table is\n");
     for(i=0;i<max;i++)
     printf("%d\t%d\n",i,a[i]);
 }
