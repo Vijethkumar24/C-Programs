@@ -2,11 +2,9 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-// Complete the following function.
 
 int find_nth_term(int n, int a, int b, int c)
 {
-    // Write your code here.
     if (n == 1)
         return a;
     else if (n == 2)
@@ -22,8 +20,8 @@ int main()
     int n, a, b, c;
 
     scanf("%d %d %d %d", &n, &a, &b, &c);
-    int ans = find_nth_term(n, a, b, c);
+    int sol = find_nth_term(n, a, b, c);
 
-    printf("%d", ans);
+    printf("%d", sol);
     return 0;
 }
