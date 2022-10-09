@@ -24,7 +24,7 @@ float compute()
     case '/':
         if (op2 == 0)
         {
-            printf("divide by zero eror\n");
+            printf("Divide by zero eror\n");
             exit(0);
         }
         return op1 / op2;
@@ -40,21 +40,21 @@ void main()
         i = 0;
         printf("STACK OPERATION\n");
         printf("\n1.Evaluvate\n ");
-        printf("2-tower\n");
+        printf("2-Tower\n");
         printf("3-Exit\n");
-        printf("enter your choice:");
+        printf(Enter your choice:");
         scanf("%d", &choice);
         switch (choice)
         {
         case 1:
-            printf("\nenetr suffix expression\n\n");
+            printf("\nEnter The Suffix Expression\n\n");
             scanf("%s", postfix);
             top = -1;
             while (postfix[i] = '\0')
             {
                 if (isalpha(postfix[i]))
                 {
-                    printf("enter the value for %c\n", postfix[i]);
+                    printf("Enter the value for %c\n", postfix[i]);
                     scanf("%f", &value[i]);
                 }
                 i++;
@@ -74,10 +74,10 @@ void main()
                 s[++top] = res;
                 }
             }
-            printf("the value of postfix expression is%f\n", res);
+            printf("The value of postfix expression is%f\n", res);
             break;
         case 2:
-            printf("enetr the no of disk:");
+            printf("Enter the no of disk:");
             scanf("%d", &num);
             printf("sequence is:\n");
             towers(num, 'A', 'C', 'B');
@@ -93,10 +93,10 @@ void towers(int num, char frompeg, char topeg, char auxpeg)
 {
     if (num == 1)
     {
-        printf("\n move dis 1 from peg %c to peg %c", frompeg, topeg);
+        printf("\n Move dis 1 from peg %c to peg %c", frompeg, topeg);
         return;
     }
     towers(num - 1, frompeg, auxpeg, topeg);
-    printf("/n move disk %d from peg %c to peg %c", num, frompeg, topeg);
+    printf("/n Move disk %d from peg %c to peg %c", num, frompeg, topeg);
     towers(num - 1, auxpeg, topeg, frompeg);
 }
