@@ -78,14 +78,14 @@ void Traversal(NODE root)
     IN = PRE = POST = root;
     if (root == NULL)
     {
-        printf("tree is empty\n");
+        printf("Tree is empty\n");
         return;
     }
-    printf("Pre order traversal\n");
+    printf("Pre-order traversal\n");
     pre(PRE);
-    printf("inorder traversal\n");
+    printf("in-order traversal\n");
     in(IN);
-    printf("pstorder traversal\n");
+    printf("post--order traversal\n");
     post(POST);
 }
 NODE Search(NODE root)
@@ -93,11 +93,11 @@ NODE Search(NODE root)
     NODE cur;
     int item;
     int i = 0;
-    printf("enter the item to be innseered\n");
+    printf("Enter the item to be innseered\n");
     scanf("%d", &item);
     if (root == NULL)
     {
-        printf("tree is empty");
+        printf("Tree is empty");
         return root;
     }
     cur = root;
@@ -123,20 +123,20 @@ void main()
     int ch, item, n;
     while (1)
     {
-        printf("1.bst\n");
-        printf("2.traversal\n");
-        printf("3.search\n");
-        printf("4.exit\n");
-        printf("enter the choice \n");
+        printf("1.Bst\n");
+        printf("2.Traversal\n");
+        printf("3.Search\n");
+        printf("4.Exit\n");
+        printf("Enter the choice \n");
         scanf("%d", &ch);
         switch (ch)
         {
         case 1:
-            printf("no of elements\n");
+            printf("Enter the no of elements\n");
             scanf("%d", &n);
             while (n > 0)
             {
-                printf("enter the item\n");
+                printf("Enter the item\n");
                 scanf("%d", &item);
                 root = insert(item, root);
                 n--;
@@ -151,7 +151,7 @@ void main()
         case 4:
             return;
         default:
-            printf("invalid choice\n");
+            printf("Invalid choice\n");
         }
     }
 }
